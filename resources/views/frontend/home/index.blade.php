@@ -42,7 +42,7 @@
 <section class="py-xl bg-surface-container-lowest">
     <div class="max-w-container-max mx-auto px-gutter grid md:grid-cols-2 gap-xl items-center">
         <div class="relative rounded-2xl overflow-hidden aspect-video shadow-xl">
-            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80"
+            <img src="https://images.unsplash.com/photo-1442544213729-6a15f1611937?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                  alt="Warga Desa Amanah"
                  class="w-full h-full object-cover"/>
         </div>
@@ -181,7 +181,7 @@
             @forelse($galleries as $gallery)
             <div class="overflow-hidden rounded-lg shadow-sm group relative">
                 @if($gallery->image)
-                    <img src="{{ Storage::url($gallery->image) }}"
+                    <img src="{{ Str::startsWith($gallery->image, 'http') ? $gallery->image : Storage::url($gallery->image) }}"
                          alt="{{ $gallery->title }}"
                          class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"/>
                 @else

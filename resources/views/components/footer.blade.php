@@ -92,9 +92,14 @@
         <p class="text-on-primary/60 text-caption">
             © {{ date('Y') }} Pemerintah Desa Amanah. Gotong Royong Membangun Bangsa.
         </p>
-        <div class="flex gap-md">
-            <a href="#" class="text-on-primary/60 hover:text-white text-caption">Privacy Policy</a>
-            <a href="#" class="text-on-primary/60 hover:text-white text-caption">Terms of Service</a>
+        <div class="flex gap-md items-center">
+            <a href="#" class="text-on-primary/60 hover:text-white text-caption transition-colors">Privacy Policy</a>
+            <a href="#" class="text-on-primary/60 hover:text-white text-caption transition-colors">Terms of Service</a>
+            <span class="text-on-primary/30 text-caption">|</span>
+            <a href="{{ route('login') }}" class="text-on-primary/60 hover:text-white text-caption transition-colors flex items-center gap-1" title="Portal Admin">
+                <span class="material-symbols-outlined text-[14px]">admin_panel_settings</span>
+                Login Admin
+            </a>
         </div>
     </div>
 </footer>

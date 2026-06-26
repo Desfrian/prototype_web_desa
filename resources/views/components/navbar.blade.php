@@ -40,12 +40,8 @@
             </a>
         </div>
 
-        {{-- Kanan: Login (Desktop) & Hamburger (Mobile) --}}
+        {{-- Kanan: Hamburger (Mobile) --}}
         <div class="flex items-center gap-4">
-            <a href="{{ route('login') }}"
-               class="hidden md:block bg-primary-container text-on-primary font-label-md px-md py-xs rounded-lg hover:bg-primary transition-colors cursor-pointer active:scale-95 duration-200">
-                Login
-            </a>
             <button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none">
                 <span class="material-symbols-outlined text-3xl">menu</span>
             </button>
@@ -61,8 +57,6 @@
         <a href="{{ route('service') }}" class="block font-label-md {{ request()->routeIs('service') ? 'text-primary font-bold' : 'text-on-surface-variant' }}">Layanan</a>
         <a href="{{ route('news.index') }}" class="block font-label-md {{ request()->routeIs('news.*') ? 'text-primary font-bold' : 'text-on-surface-variant' }}">Berita</a>
         <a href="{{ route('contact') }}" class="block font-label-md {{ request()->routeIs('contact') ? 'text-primary font-bold' : 'text-on-surface-variant' }}">Kontak</a>
-        <hr class="border-gray-100 mt-2 mb-2">
-        <a href="{{ route('login') }}" class="block w-full text-center bg-primary-container text-on-primary font-label-md px-md py-3 rounded-lg">Login</a>
     </div>
 </header>
 

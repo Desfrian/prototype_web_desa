@@ -43,7 +43,7 @@
         </div>
         <div class="md:col-span-4 relative group">
             <div class="aspect-[3/4] overflow-hidden rounded-xl shadow-lg transform group-hover:-translate-y-2 transition-transform duration-500">
-                <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80"
+                <img src="https://images.unsplash.com/photo-1772512799658-c47bde91c3bc?q=80&w=1333&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                      alt="Sejarah Desa"
                      class="w-full h-full object-cover"/>
             </div>
@@ -191,13 +191,13 @@
                     {{ $loop->index === 0 ? 'bg-primary text-white' : ($loop->index === 3 ? 'bg-primary-container text-on-primary-container' : 'bg-surface-container') }}
                     p-lg rounded-2xl text-center flex flex-col items-center justify-center">
                     <span class="material-symbols-outlined text-4xl mb-sm
-                        {{ $loop->index === 0 ? 'text-white' : ($loop->index === 1 ? 'text-secondary' : 'text-tertiary') }}">
+                        {{ $loop->index === 0 || $loop->index === 3 ? 'text-white' : ($loop->index === 1 ? 'text-secondary' : 'text-tertiary') }}">
                         {{ $stat->icon }}
                     </span>
-                    <div class="text-3xl font-bold {{ $loop->index === 0 || $loop->index === 3 ? '' : 'text-primary' }}">
+                    <div class="text-3xl font-bold {{ $loop->index === 0 || $loop->index === 3 ? 'text-white' : 'text-primary' }}">
                         {{ $stat->value }}
                     </div>
-                    <div class="text-caption {{ $loop->index === 0 ? 'text-white/80' : 'text-on-surface-variant' }}">
+                    <div class="text-caption {{ $loop->index === 0 || $loop->index === 3 ? 'text-white/80' : 'text-on-surface-variant' }}">
                         {{ $stat->label }}
                     </div>
                 </div>

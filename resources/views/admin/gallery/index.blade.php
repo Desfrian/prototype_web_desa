@@ -18,7 +18,7 @@
     <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
         <div class="h-40 bg-gray-100 overflow-hidden">
             @if($gallery->image)
-                <img src="{{ Storage::url($gallery->image) }}"
+                <img src="{{ Str::startsWith($gallery->image, 'http') ? $gallery->image : Storage::url($gallery->image) }}"
                      class="w-full h-full object-cover"/>
             @else
                 <div class="w-full h-full flex items-center justify-center">
